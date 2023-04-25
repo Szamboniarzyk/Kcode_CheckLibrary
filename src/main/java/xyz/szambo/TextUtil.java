@@ -1,6 +1,7 @@
 package xyz.szambo;
 
 import net.md_5.bungee.api.ChatColor;
+import org.bukkit.Bukkit;
 
 public class TextUtil {
 
@@ -11,6 +12,9 @@ public class TextUtil {
                 .replace("->", "→")
                 .replace("<-", "←")
                 .replace("**", "•");
+    }
+    public static void Log(String message) {
+        Bukkit.getServer().getLogger().severe(fixColor(message));
     }
 
 }
